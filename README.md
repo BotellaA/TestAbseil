@@ -1,4 +1,4 @@
-# Instruction to reproduce
+# Instructions to reproduce
 
 ```
 mkdir build
@@ -8,7 +8,7 @@ make
 ./absl_test
 ```
 
-# Output
+# Outputs
 
 ```
 $ ./absl_test 
