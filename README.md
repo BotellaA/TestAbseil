@@ -1,16 +1,21 @@
 # Instruction to reproduce
 
+```
 mkdir build
 cd build
 cmake -DCMAKE_PREFIX_PATH=/path/to/abseil ..
 make
 ./absl_test
+```
 
 # Output
 
+```
 $ ./absl_test 
 ./absl_test: error while loading shared libraries: libabsl_city.so: cannot open shared object file: No such file or directory
+```
 
+```
 $ ldd absl_test 
         linux-vdso.so.1 (0x00007ffc7f5fc000)
         libabsl_hash.so => PATH_TO_ABSEIL/lib/libabsl_hash.so (0x00007f57ae922000)
@@ -27,3 +32,4 @@ $ ldd absl_test
         libabsl_time.so => not found
         libabsl_raw_logging_internal.so => not found
         libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f57ad7e9000)
+```
